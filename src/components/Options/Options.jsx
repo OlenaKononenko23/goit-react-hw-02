@@ -1,10 +1,10 @@
-export default function  Options ({ onFeedback, onReset, totalFeedback }) {
+export default function  Options ({ updateFeedback, resetFeedback, totalFeedback }) {
     return (
         <div>
-            <button onClick={() => onFeedback('good')}>Good</button>
-            <button onClick={() => onFeedback('neutral')}>Neutral</button>
-            <button onClick={() => onFeedback('bad')}>Bad</button>
-            {totalFeedback > 0 && <button onClick={onReset}>Reset</button>}
+            <button onClick={() => updateFeedback('good')}>Good</button>
+            <button onClick={() => updateFeedback('neutral')}>Neutral</button>
+            <button onClick={() => updateFeedback('bad')}>Bad</button>
+            {totalFeedback > 0 && <button onClick={resetFeedback}>Reset</button>}
         </div>
     )
 }
