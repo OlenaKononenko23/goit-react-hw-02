@@ -1,13 +1,14 @@
-export default function Feedback ({ feedback, totalFeedback }) {
+import css from "./Feedback.module.css";
+
+export default function Feedback({ feedback, totalFeedback }) {
  const positivePercentage = Math.round((feedback.good / totalFeedback) * 100);
   return (
     <div>
-      <h2>Feedback</h2>
-      <p>Good: {feedback.good}</p>
-      <p>Neutral: {feedback.neutral}</p>
-      <p>Bad: {feedback.bad}</p>
-      <p>Total: {totalFeedback}</p>
-      <p>Positive: {positivePercentage}%</p>
+      <p className={css.p}>Good: {feedback.good}</p>
+      <p className={css.p}>Neutral: {feedback.neutral}</p>
+      <p className={css.p}>Bad: {feedback.bad}</p>
+      <p className={css.p}>Total: {totalFeedback}</p>
+      <p className={css.p}>Positive: {positivePercentage}%</p>
     </div>
   )
 }
